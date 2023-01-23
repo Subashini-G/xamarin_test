@@ -79,10 +79,10 @@ jobs:
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test
+      run: dotnet test ./Users/SU20380276/Desktop/folder/absoluteLayout/absoluteLayout/absoluteLayout.csproj
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
-    - name: Restore the application
+    - name: Restore the application ./Users/SU20380276/Desktop/folder/absolouteLayout
       run: msbuild $env:absoluteLayout.sln /t:Restore /p:Configuration=$env:Configuration
       env:
         Configuration: ${{ matrix.configuration }}
